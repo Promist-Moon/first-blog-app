@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Posts" %>
+
+<div class="posts-container">
+
+    <div id="posts" class="posts-grid">
+    <div class=post-item id="brief">
+        <h2 class="lilita-one-regular">Your Posts</h2>
+        <p class="strait-regular">View the list of your blog posts here.</p>
+    </div>
+    <% @posts.each do |post| %>
+        <div class="post-item">
+        <%= render post %>
+        <p>
+            <%= link_to "Show this post", post %>
+        </p>
+        </div>
+    <% end %>
+    </div>
+
+</div>
+
+
+<%= link_to "New post", new_post_path %>

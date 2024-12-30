@@ -1,0 +1,13 @@
+<div id="<%= dom_id post %>" class="blog-post">
+  <header class="post-header">
+    <h2 class="lilita-one-regular"><%= post.title %></h2>
+    <p class="post-meta">
+      <em>Posted on <%= post.created_at.strftime("%B %d, %Y") %></em>
+    </p>
+  </header>
+
+  <section class="post-body">
+    <%= simple_format(post.body) %> <!-- Converts newlines to <p> tags, making text easier to read -->
+  </section>
+
+</div>
